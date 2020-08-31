@@ -5,7 +5,6 @@ using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Vexe.Runtime.Extensions;
 
 namespace SMMMGUIEdior
 {
@@ -57,6 +56,7 @@ namespace SMMMGUIEdior
         }
         void Start()
         {
+            
             CanBeCompiled = false;
             CompileButton.onClick.AddListener(CompileTScript);
             ClearUIButton.onClick.AddListener(() => actions.Clear());
