@@ -40,15 +40,23 @@ namespace SMMMGUIEdior
                     Regex stringEx = new Regex("\"(.*?)\"");
                     Match stringMatch = stringEx.Match(command);
                     List<string> rects = rectMatch.Value.Split(",".ToCharArray()).OfType<string>().ToList();
+                    List<float> parsedRects = new List<float>();
                     switch (commandMatch.Value)
                     {
                         case "Label":
-                            List<float> parsedRects = new List<float>();
+                            
                             foreach (string rect in rects)
                             {
                                 parsedRects.Add(float.Parse(rect.Replace(",", "").Trim()));
                             }
                             actions.Add(() => GUI.Label(new Rect(parsedRects[0], parsedRects[1], parsedRects[2], parsedRects[3]), stringMatch.Value.RemoveQuotes()));
+                            break;
+                        case "Box":
+                            foreach (string rect in rects)
+                            {
+                                parsedRects.Add(float.Parse(rect.Replace(",", "").Trim()));
+                            }
+                            actions.Add(() => GUI.Box(new Rect(parsedRects[0], parsedRects[1], parsedRects[2], parsedRects[3]), stringMatch.Value.RemoveQuotes()));
                             break;
                     }
                 });
