@@ -4,7 +4,6 @@ A visualizer for the Unity Immediate UI system that helps with Software Inc UI c
 Download from releases tab.
 
 ## Language tutorial:
-(NOT DONE)
 
 The language is pretty simple and goes along this format:
 
@@ -43,3 +42,18 @@ You can create simple buttons using the Button element.
 
 `Button x, y, width, height "Text"`
 
+#### Input
+
+You can create a simple input box by using the Input element.
+
+`Input 10, 70, 80, 75 "Edit me at will"`
+
+### Fully fledged example:
+
+```
+Box 5, 5, 90, 145 "Test Box"
+Label 10, 25, 80, 25 "Hello!"
+Input 10, 70, 80, 75 "Edit me!"
+```
+
+![Screenshot](https://i.gyazo.com/88b428c1a102f5bbc92c0a5279e5bc78.png)
