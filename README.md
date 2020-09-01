@@ -20,8 +20,6 @@ Example:
 
 You can create boxes using the Box element.
 
-Example: 
-
 ```
 Box x, y, width, height "OptionalTitle"
 ```
@@ -35,4 +33,13 @@ BoxEnd
 ```
 #### Label
 
-You can create simple labels using the 
+You can create simple labels using the Label element.
+
+`Label x, y, width, height "Text"`
+
+#### Button
+
+You can create simple buttons using the Button element.
+
+`Button x, y, width, height "Text"`
+
